@@ -1,9 +1,19 @@
+## Tech Stack
 
-### Services
+* [Docker](https://www.docker.com/)
+* [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
+* [Nginx](https://www.nginx.com)
+* [Laravel 9](https://laravel.com/)
+* [MySQL 8](https://www.mysql.com/)
+* [PHP 8](https://nodejs.org)
+* [Node 16](https://nodejs.org)
+* [NPM 8](https://www.npmjs.com)
 
-This project was run on docker compose & here are the list of services used on docker-compose.yml file.
+### Docker Services
 
-* [PHP 8](https://hub.docker.com/_/php)
+Here are the list of services used on docker-compose.yml file.
+
+* [PHP](https://hub.docker.com/_/php)
 * [MySQL](https://hub.docker.com/_/mysql)
 * [Nginx](https://hub.docker.com/_/nginx)
 * [phpmyadmin](https://hub.docker.com/_/phpmyadmin)
