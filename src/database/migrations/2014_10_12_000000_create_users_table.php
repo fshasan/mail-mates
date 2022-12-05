@@ -14,8 +14,8 @@ return new class extends Migration {
     {
         Schema::create("users", function (Blueprint $table) {
             $table->id();
-            $table->string('first name',255)->index('fname')->nullable();
-            $table->string('last name',255)->index('lname')->nullable();
+            $table->string('first_name',255)->index('fname');
+            $table->string('last_name',255)->index('lname');
             $table->string('email',100)->unique();
             $table->string('password',60)->nullable();
             $table->rememberToken();

@@ -29,8 +29,8 @@ class HomeController extends Controller
         $data = $request->all();
 
         $user = User::create([
-            'fname'  =>  $data['fname'],
-            'lname'  =>  $data['lname'],
+            'first_name'  =>  $data['fname'],
+            'last_name'  =>  $data['lname'],
             'email' =>  $data['email'],
             'password' => Hash::make($data['password'])
         ]);
@@ -53,9 +53,12 @@ class HomeController extends Controller
 
     public function dashboard()
     {
+
         if(Auth::check())
-        {
-            return view('Romatoo.dashboard');
+        {   
+            $user = Auth::user();
+
+            return view('Romatoo.dashboard', compact('user'));
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');
