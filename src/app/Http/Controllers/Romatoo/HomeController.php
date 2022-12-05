@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Romatoo;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
@@ -19,14 +23,8 @@ class HomeController extends Controller
         return view('Romatoo.register');
     }
 
-    public function validate_registration(Request $request)
+    public function validate_registration(RegisterRequest $request)
     {
-        $request->validate([
-            'fname'        =>   'required|string|max:255',
-            'lname'        =>   'required|string|max:100',
-            'email'        =>   'required|email|unique:users',
-            'password'     =>   'required|min:8'
-        ]);
 
         $data = $request->all();
 
@@ -40,38 +38,22 @@ class HomeController extends Controller
         return redirect('Romatoo.login')->with('success', 'Registration Completed! Now you can login.');
     }
 
+    public function validate_login(LoginRequest $request)
+    {
+
+        $credentials = $request->only('email', 'password');
+
+        if(Auth::attempt($credentials))
+        {
+            return redirect('Romatoo.dashboard');
+        }
+
+        return redirect('Romatoo.login')->with('success', 'Login details are not valid');
+    }
+
     public function logout()
     {
         
     }
 
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
-    }
 }
