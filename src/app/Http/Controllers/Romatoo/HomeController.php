@@ -35,7 +35,7 @@ class HomeController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 
-        return redirect('Romatoo.login')->with('success', 'Registration Completed! Now you can login.');
+        return redirect('login')->with('success', 'Registration Completed! Now you can login.');
     }
 
     public function validate_login(LoginRequest $request)
@@ -45,10 +45,20 @@ class HomeController extends Controller
 
         if(Auth::attempt($credentials))
         {
-            return redirect('Romatoo.dashboard');
+            return redirect('dashboard');
         }
 
-        return redirect('Romatoo.login')->with('success', 'Login details are not valid');
+        return redirect('login')->with('success', 'Login details are not valid');
+    }
+
+    public function dashboard()
+    {
+        if(Auth::check())
+        {
+            return view('Romatoo.dashboard');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
     }
 
     public function logout()
@@ -57,7 +67,7 @@ class HomeController extends Controller
 
         Auth::logout();
 
-        return Redirect('Romatoo.login');
+        return Redirect('login');
     }
 
 }

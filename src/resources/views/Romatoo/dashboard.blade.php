@@ -1,4 +1,4 @@
-@extends('main')
+@extends('Romatoo.main')
 
 @section('content')
 
