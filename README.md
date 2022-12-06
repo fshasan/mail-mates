@@ -1,14 +1,20 @@
 ## About Project
 
 The __src__ folder contains the project files.
+
+## Local Device & OS
+
+* [HP Pavilion 15](https://www.amazon.com/HP-Pavilion-Graphics-Compatible-15-cs3019nr/dp/B085B63QYR)
+* [Ubuntu 20.04 LTS](https://linuxconfig.org/ubuntu-20-04-download)
 ## Tech Stack
 
-* [Docker](https://www.docker.com/)
-* [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
+* [PHP 8](https://www.php.net/)
+* [Composer](https://getcomposer.org/)
+* [MySQL 8](https://www.mysql.com/)
 * [Nginx](https://www.nginx.com)
 * [Laravel 9](https://laravel.com/)
-* [MySQL 8](https://www.mysql.com/)
-* [PHP 8](https://nodejs.org)
+* [Docker](https://www.docker.com/)
+* [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
 * [Node 16](https://nodejs.org)
 * [NPM 8](https://www.npmjs.com)
 
