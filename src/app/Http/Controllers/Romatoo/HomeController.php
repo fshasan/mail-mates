@@ -38,14 +38,16 @@ class HomeController extends Controller
         return redirect('login')->with('success', 'Registration Completed! Now you can login.');
     }
 
-    public function validate_login(LoginRequest $request)
+    public function validate_login(LoginRequest $request, User $credentials)
     {
 
         $credentials = $request->only('email', 'password');
 
         if(Auth::attempt($credentials))
         {
-            return redirect('dashboard');
+            $user = Auth::user();
+
+            return redirect()->route('dashboard', ['user_id' => $user['id']]);
         }
 
         return redirect('login')->with('success', 'Login details are not valid');
