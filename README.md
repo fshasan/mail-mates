@@ -12,7 +12,7 @@ The __src__ folder contains the project files.
 * [Node 16](https://nodejs.org)
 * [NPM 8](https://www.npmjs.com)
 
-### Docker Services
+## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
 
@@ -21,7 +21,7 @@ Here are the list of services used on docker-compose.yml file.
 * [Nginx](https://hub.docker.com/_/nginx)
 * [phpmyadmin](https://hub.docker.com/_/phpmyadmin)
 
-### Docker commands
+## Docker commands
 
 List of docker commands to run the project.
 
