@@ -60,6 +60,10 @@ class HomeController extends Controller
         {   
             $user = Auth::user();
 
+            $mails = User::with('emails')->where('id', Auth::id())->get();
+
+            // dd($mails->toArray());
+
             return view('Romatoo.dashboard', compact('user'));
         }
 

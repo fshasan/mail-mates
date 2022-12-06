@@ -35,7 +35,7 @@ class User extends Authenticatable
 
      public function emails()
      {
-        return $this->hasMany(Email::class);
+        return $this->hasMany(Email::class, 'sender_id');
      }
 
 }
