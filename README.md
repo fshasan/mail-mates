@@ -1,3 +1,6 @@
+## About Project
+
+The __src__ folder contains the project files.
 ## Tech Stack
 
 * [Docker](https://www.docker.com/)
@@ -26,9 +29,9 @@ List of docker commands to run the project.
    ```sh
    cp .env.example .env
    ```
-* Run this command to build the docker containers.
+* Command to build & start all docker conatainers.
    ```sh
-   docker-compose build
+   docker-compose up -d --build
    ```
 * Install composer on src folder.
    ```sh
@@ -50,10 +53,6 @@ List of docker commands to run the project.
     ```sh
         php artisan migrate
     ```
-* Start all docker conatainers.
-   ```sh
-   docker-compose up -d
-   ```
 * Check running docker conatainers status.
    ```sh
    docker-compose ps
