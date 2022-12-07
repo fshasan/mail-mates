@@ -13,11 +13,12 @@
 </div>
 
 <div class="card">
-	<div class="card-header mt-5">
+	<div class="card-header mt-4">
 		@include('Romatoo.components.filter')
 	</div>
 
-	<div class="card-body mt-5">
+	<div class="card-body mt-4">
+		<h5>You have a total of {{$emails->count()}} messages.</h5>
 		@include('Romatoo.components.inbox')
 	</div>
 

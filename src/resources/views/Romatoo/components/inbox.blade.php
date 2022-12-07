@@ -1,4 +1,4 @@
-<table class="table table-sm">
+<table class="table table-sm mt-5">
     <thead>
         <tr>
             <th>Type</th>
@@ -11,9 +11,30 @@
     <tbody>
         @forelse ($emails as $email)
             <tr>
-                <td>{{$email->email_type}}</td>
+                <td>{{ \App\Enums\EmailType::EMAIL_TYPES_WITH_LABEL[$email->email_type] }}</td>
                 <td>{{$email->subject}}</td>
-                <td>{{$email->body}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        View
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Message # {{$email->id}}</h5>
+                            </div>
+                            <div class="modal-body">
+                                {{$email->body}}
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
                 <td>{{$email->sender}}</td>
                 <td>{{$email->created_at}}</td>
             </tr>
