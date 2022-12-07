@@ -11,12 +11,13 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="{{ route('sendEmail') }}" method="POST">
+              @csrf
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Recipient:</label>
                 <input type="text" class="form-control" name="recipient" id="recipient-name">
               </div>
-              <div class="form-group">
+              <div class="form-group mt-4">
                 <select class="form-control" name="type">
                     <option value=''>Select Type</option>
 
@@ -32,7 +33,7 @@
               </div>
               <div class="form-group">
                 <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" name="message" id="message-text"></textarea>
+                <textarea rows="10" class="form-control" name="message" id="message-text"></textarea>
               </div>
               <div class="form-group mt-4">
                 <button type="reset" class="btn btn-danger">Clear</button>

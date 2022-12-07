@@ -32,6 +32,8 @@ Route::controller(HomeController::class)->group(function(){
     Route::post('/validate_login', 'validate_login')->name('validateLogin');
 
     Route::get('/dashboard', 'dashboard')->name('dashboard');
+    
+    Route::post('/sent_email', 'sendEmail')->name('sendEmail');
 
 });
 

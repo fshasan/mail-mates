@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Romatoo;
 use App\Models\User;
 use App\Models\Email;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EmailRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
@@ -61,12 +62,35 @@ class HomeController extends Controller
         {   
             $user = Auth::user();
 
-            $emails = Email::where('sender_id', Auth::id())->latest()->paginate();
+            // $emails = Email::whereIn($user['email'], 'recievers')->latest()->paginate();
+
+            dd(Email::get()->toArray());
 
             return view('Romatoo.dashboard', compact('user', 'emails'));
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+    public function sendEmail(EmailRequest $request)
+    {
+        $data = $request->all();
+
+        $getMail = explode(",", $data['recipient']);
+
+        $user = Auth::user();
+
+        $email = Email::create([
+            'sender' => $user['email'],
+            'recievers' => json_encode($getMail),
+             'email_type' => $data['type'],
+             'subject' => $data['subject'],
+             'body' => $data['message']
+        ]);
+
+        $email->save();
+
+        return redirect()->route('dashboard', ['user_id' => Auth::id()])->with('success', 'Mail Sent Successfully!');
     }
 
     public function logout()

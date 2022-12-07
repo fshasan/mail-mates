@@ -10,10 +10,10 @@ class Email extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["sender_id", "reciever_id", "subject", "body", "email_type"];
+    protected $fillable = ["sender", "recievers", "subject", "body", "email_type"];
 
     protected $casts = [
-        'reciever_id' => 'array'
+        'recievers' => 'array',
     ];
 
     public function user()

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->id();
-            $table->integer('sender_id')->unsigned();
-            $table->json('reciever_id');
+            $table->string('sender', 100);
+            $table->json('recievers');
             $table->string('subject',100);
             $table->text('body');
             $table->tinyInteger('email_type')->index('etype')->comment('Primary: 1, Social: 2, Promotional: 3, Forum: 4');

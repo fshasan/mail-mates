@@ -1,7 +1,6 @@
 <table class="table table-sm">
     <thead>
         <tr>
-            <th>#</th>
             <th>Type</th>
             <th>Subject</th>
             <th>Message</th>
@@ -11,7 +10,6 @@
     <tbody>
         @forelse ($emails as $email)
             <tr>
-                <th scope="row">{{ item_sl($loop->index, $emails->currentPage(), $emails->perPage()) }}</th>
                 <td>{{$email->email_type}}</td>
                 <td>{{$email->subject}}</td>
                 <td>{{$email->body}}</td>
