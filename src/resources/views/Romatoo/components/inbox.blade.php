@@ -4,6 +4,7 @@
             <th>Type</th>
             <th>Subject</th>
             <th>Message</th>
+            <th>Recieved from</th>
             <th>Recieved at</th>
         </tr>
     </thead>
@@ -13,6 +14,7 @@
                 <td>{{$email->email_type}}</td>
                 <td>{{$email->subject}}</td>
                 <td>{{$email->body}}</td>
+                <td>{{$email->sender}}</td>
                 <td>{{$email->created_at}}</td>
             </tr>
         @empty 

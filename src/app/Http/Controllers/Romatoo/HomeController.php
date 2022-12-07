@@ -62,9 +62,7 @@ class HomeController extends Controller
         {   
             $user = Auth::user();
 
-            // $emails = Email::whereIn($user['email'], 'recievers')->latest()->paginate();
-
-            dd(Email::get()->toArray());
+            $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->paginate();
 
             return view('Romatoo.dashboard', compact('user', 'emails'));
         }
@@ -78,11 +76,19 @@ class HomeController extends Controller
 
         $getMail = explode(",", $data['recipient']);
 
+        for($i = 0; $i < count($getMail); $i++)
+        {
+            $getMail[$i] = str_replace(' ', '', $getMail[$i]);
+        }
+
         $user = Auth::user();
 
         $email = Email::create([
             'sender' => $user['email'],
-            'recievers' => json_encode($getMail),
+            'recievers' => [
+                'email' => $getMail,
+                'total' => count($getMail),
+            ],
              'email_type' => $data['type'],
              'subject' => $data['subject'],
              'body' => $data['message']
