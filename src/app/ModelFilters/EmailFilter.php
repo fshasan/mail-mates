@@ -1,7 +1,7 @@
 <?php 
 
 namespace App\ModelFilters;
-
+use Illuminate\Support\Facades\Auth;
 use EloquentFilter\ModelFilter;
 
 class EmailFilter extends ModelFilter

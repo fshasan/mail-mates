@@ -62,7 +62,7 @@ class HomeController extends Controller
         {   
             $user = Auth::user();
 
-            $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->paginate();
+            $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->filter(request()->all())->paginateFilter();;
 
             return view('Romatoo.dashboard', compact('user', 'emails'));
         }
