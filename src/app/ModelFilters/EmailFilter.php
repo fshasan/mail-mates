@@ -3,6 +3,7 @@
 namespace App\ModelFilters;
 use Illuminate\Support\Facades\Auth;
 use EloquentFilter\ModelFilter;
+use Carbon\Carbon;
 
 class EmailFilter extends ModelFilter
 {
@@ -37,5 +38,16 @@ class EmailFilter extends ModelFilter
     public function search($search)
     {
         return $this->whereLike('subject', $search);
+    }
+
+    public function recievedAt($range)
+    {
+        $rangeArray = explode(' - ', $range);
+
+        $startDate = Carbon::parse($rangeArray[0])->format('Y-m-d');
+
+        $endDate = Carbon::parse($rangeArray[1])->format('Y-m-d');
+
+        return $this->whereBetween('created_at', [$startDate, $endDate]);
     }
 }
