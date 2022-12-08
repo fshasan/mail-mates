@@ -10,25 +10,25 @@
 			<form action="{{ route('validateRegistration') }}" method="POST">
 				@csrf
 				<div class="form-group mb-3">
-					<input type="text" name="fname" class="form-control" placeholder="First Name" />
+					<input type="text" name="fname" class="form-control" placeholder="Enter First Name" />
 					@if($errors->has('fname'))
 						<span class="text-danger">{{ $errors->first('fname') }}</span>
 					@endif
 				</div>
                 <div class="form-group mb-3">
-					<input type="text" name="lname" class="form-control" placeholder="Last Name" />
+					<input type="text" name="lname" class="form-control" placeholder="Enter Last Name" />
 					@if($errors->has('lname'))
 						<span class="text-danger">{{ $errors->first('lname') }}</span>
 					@endif
 				</div>
 				<div class="form-group mb-3">
-					<input type="text" name="email" class="form-control" placeholder="Email Address" />
+					<input type="text" name="email" class="form-control" placeholder=" Enter Email Address" />
 					@if($errors->has('email'))
 						<span class="text-danger">{{ $errors->first('email') }}</span>
 					@endif
 				</div>
 				<div class="form-group mb-3">
-					<input type="password" name="password" class="form-control" placeholder="Password" />
+					<input type="password" name="password" class="form-control" placeholder="Enter Password. Length must be of 6" />
 					@if($errors->has('password'))
 						<span class="text-danger">{{ $errors->first('password') }}</span>
 					@endif
