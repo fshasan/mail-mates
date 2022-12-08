@@ -70,4 +70,6 @@ List of docker commands to run the project.
 
 ## Database Schema
 
-<img src="./images/Databsae_Schema.png">
+The relation between the tables of the project's database is displayed below.
+
+<img src="./images/Databsae_Schema.png" style="float: center">
