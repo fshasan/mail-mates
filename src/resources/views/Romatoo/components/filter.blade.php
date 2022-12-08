@@ -10,6 +10,16 @@
 
             </select>
         </div>
+        <div class="form-group col-auto mb-3 ">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="bi bi-calendar"></i>
+                    </div>
+                </div>
+                <input type="text" class="form-control dateranging" id="dateRanging" name="recieved_at" required value="{{ request()->get('recieved_at') }}" placeholder="Recieved Between" autocomplete="off">
+            </div>
+        </div>
         <div class="form-group col-auto mb-3">
             <button type="submit" class="btn btn-success "><i class="bi bi-funnel"></i></button>
         </div>
@@ -29,7 +39,22 @@
 </form>
 
 <script>
-    $('.reset').on('click', function() {
-        $("select[name = email_type],  input[name = search]").val('');
+
+    $('#dateRanging').daterangepicker({
+        autoUpdateInput: false,
     });
+
+    $('#dateRanging').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    });
+
+    $('#dateRanging').keydown(function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    $('.reset').on('click', function() {
+        $("select[name = email_type],  input[name = search], input[name = recieved_at]").val('');
+    });
+    
 </script>
