@@ -67,3 +67,7 @@ List of docker commands to run the project.
    ```sh
    docker-compose down
    ```
+
+## Database Schema
+
+![alt text](https://gitlab.com/Fsh-98/romato-u689p/-/blob/main/images/Databsae_Schema.png)
