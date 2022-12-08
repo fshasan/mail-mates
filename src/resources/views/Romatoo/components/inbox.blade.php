@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th>Type</th>
-            <th>Subject</th>
             <th>Message</th>
             <th>Recieved from</th>
             <th>Recieved at</th>
@@ -12,7 +11,6 @@
         @forelse ($emails as $email)
             <tr>
                 <td>{{ \App\Enums\EmailType::EMAIL_TYPES_WITH_LABEL[$email->email_type] }}</td>
-                <td>{{$email->subject}}</td>
                 <td>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#code{{$email->id}}">
                         View
@@ -23,7 +21,13 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLongTitle">Message # {{$email->id}}</h5>
+                              <h5 class="modal-title" id="exampleModalLongTitle"><i>Subject</i></h5>
+                            </div>
+                            <div class="modal-body">
+                                {{$email->subject}}
+                            </div>
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle"><i>Message # {{$email->id}}</i></h5>
                             </div>
                             <div class="modal-body">
                                 {{$email->body}}
