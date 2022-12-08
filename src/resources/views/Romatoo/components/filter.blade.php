@@ -17,7 +17,7 @@
                         <i class="bi bi-calendar"></i>
                     </div>
                 </div>
-                <input type="text" class="form-control dateranging" id="dateRanging" name="recieved_at" required value="{{ request()->get('recieved_at') }}" placeholder="Recieved Between" autocomplete="off">
+                <input type="text" class="form-control dateranging" id="dateRanging" name="recieved_at" value="{{ request()->get('recieved_at') }}" placeholder="Recieved Between" autocomplete="off">
             </div>
         </div>
         <div class="form-group col-auto mb-3">
