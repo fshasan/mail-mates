@@ -70,4 +70,4 @@ List of docker commands to run the project.
 
 ## Database Schema
 
-![alt text](https://gitlab.com/Fsh-98/romato-u689p/-/blob/main/images/Databsae_Schema.png?raw=true)
+<img src="./images/Databsae_Schema.png">
