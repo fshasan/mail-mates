@@ -19,7 +19,7 @@
 
 	<div class="card-body mt-4">
 		<h5>You have a total of {{$emails->count()}} messages.</h5>
-		@include('Romatoo.components.inbox')
+		@include('Romatoo.components.sent')
 	</div>
 
 </div>
