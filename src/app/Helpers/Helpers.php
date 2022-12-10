@@ -21,20 +21,3 @@ if(!function_exists('user_info'))
         return $user;
     }
 }
-
-if(!function_exists('user_login_ok'))
-{
-    function user_login_ok()
-    {
-        return Auth::check();
-    }
-}
-
-if(!function_exists('text'))
-{
-    function user_logout()
-    {
-        Auth::logout();
-    }
-}
-
