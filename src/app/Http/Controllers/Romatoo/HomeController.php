@@ -103,7 +103,7 @@ class HomeController extends Controller
     {
         Session::flush();
 
-        user_logout();
+        Auth::logout();
 
         return Redirect('login');
     }

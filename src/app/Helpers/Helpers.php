@@ -30,14 +30,6 @@ if(!function_exists('user_login_ok'))
     }
 }
 
-if(!function_exists('user_logout'))
-{
-    function user_logout()
-    {
-        Auth::logout();
-    }
-}
-
 if(!function_exists('text'))
 {
     function user_logout()
