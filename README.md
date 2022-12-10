@@ -8,7 +8,7 @@ It's basically a user to user mail messaging system. To send or recieve emails, 
 
 * [HP Pavilion 15](https://www.amazon.com/HP-Pavilion-Graphics-Compatible-15-cs3019nr/dp/B085B63QYR)
 * [Ubuntu 20.04 LTS](https://linuxconfig.org/ubuntu-20-04-download)
-## Installation and Tech Stack
+## Installation and Tech Design
 
 Here are the required components you need to install in your local machine to run this project. 
 
@@ -23,6 +23,11 @@ Here are the required components you need to install in your local machine to ru
 * [Node 16](https://nodejs.org)
 * [NPM 8](https://www.npmjs.com)
 
+## Deployment
+
+* Cloud Server: [Scalingo](https://scalingo.com/)
+
+Hit the link to view the project : 
 ## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
