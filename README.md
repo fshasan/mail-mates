@@ -99,8 +99,7 @@ The relation between the tables of the project's database is displayed below.
 
  <img src="./images/R4_b.jpg">
 
-### **R5**: As a user, I want to get emails in my inbox in four categories:
- Primary, Social, Promotional, and Forum. Email must be automatically categorized.
+### **R5**: As a user, I want to get emails in my inbox in four categories: Primary, Social, Promotional, and Forum. Email must be automatically categorized.
  
  <img src="./images/R5_a.jpg">
 
