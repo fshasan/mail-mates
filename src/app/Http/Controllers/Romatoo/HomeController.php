@@ -47,7 +47,7 @@ class HomeController extends Controller
 
         if(Auth::attempt($credentials))
         {
-            $user = Auth::user();
+            $user = user_info();
 
             return redirect()->route('dashboard', ['user_id' => $user['id']]);
         }
@@ -58,11 +58,11 @@ class HomeController extends Controller
     public function dashboard()
     {
 
-        if(Auth::check())
+        if(user_login_ok())
         {   
-            $user = Auth::user();
+            $user = user_info();
 
-            $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->filter(request()->all())->paginateFilter();;
+            $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->filter(request()->all())->paginateFilter();
             
             return view('Romatoo.dashboard', compact('user', 'emails'));
         }
@@ -81,7 +81,7 @@ class HomeController extends Controller
             $getMail[$i] = str_replace(' ', '', $getMail[$i]);
         }
 
-        $user = Auth::user();
+        $user = user_info();
 
         $email = Email::create([
             'sender' => $user['email'],
@@ -96,14 +96,14 @@ class HomeController extends Controller
 
         $email->save();
 
-        return redirect()->route('dashboard', ['user_id' => Auth::id()])->with('success', 'Mail Sent Successfully!');
+        return redirect()->route('dashboard', ['user_id' => logged_in_id()])->with('success', 'Mail Sent Successfully!');
     }
 
     public function logout()
     {
         Session::flush();
 
-        Auth::logout();
+        user_logout();
 
         return Redirect('login');
     }

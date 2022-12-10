@@ -1,27 +1,48 @@
 <?php
+
+use Illuminate\Support\Facades\Auth;
   
-use Carbon\Carbon;
-  
-/**
- * Write code on Method
- *
- * @return response()
- */
-if (! function_exists('convertYmdToMdy')) {
-    function convertYmdToMdy($date)
+if(!function_exists('logged_in_id'))
+{
+    function logged_in_id()
     {
-        return Carbon::createFromFormat('Y-m-d', $date)->format('m-d-Y');
+        $id = Auth::id();
+
+        return $id;
     }
 }
-  
-/**
- * Write code on Method
- *
- * @return response()
- */
-if (! function_exists('convertMdyToYmd')) {
-    function convertMdyToYmd($date)
+
+if(!function_exists('user_info'))
+{
+    function user_info()
     {
-        return Carbon::createFromFormat('m-d-Y', $date)->format('Y-m-d');
+        $user = Auth::user();
+
+        return $user;
     }
 }
+
+if(!function_exists('user_login_ok'))
+{
+    function user_login_ok()
+    {
+        return Auth::check();
+    }
+}
+
+if(!function_exists('user_logout'))
+{
+    function user_logout()
+    {
+        Auth::logout();
+    }
+}
+
+if(!function_exists('text'))
+{
+    function user_logout()
+    {
+        Auth::logout();
+    }
+}
+
