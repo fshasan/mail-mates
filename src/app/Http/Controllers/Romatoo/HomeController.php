@@ -64,10 +64,7 @@ class HomeController extends Controller
 
             $emails = Email::whereJsonContains('recievers', ['email' => $user['email']])->latest()->filter(request()->all())->paginateFilter();;
             
-            $sentEmails = Email::with('user')->where('sender', $user['email'])->latest()->filter(request()->all())->paginateFilter();;
-
-            dd($sentEmails->toArray());
-            return view('Romatoo.dashboard', compact('user', 'emails', 'sentEmails'));
+            return view('Romatoo.dashboard', compact('user', 'emails'));
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');
