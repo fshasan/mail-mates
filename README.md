@@ -1,6 +1,8 @@
 ## About Project
 
-The __src__ folder contains the project files.
+It's basically a user to user mail messaging system. To send or recieve emails, the sender and reciever must have their credentials registered. After the registration, the user can login with their accounts. Once that is done, their personal dashboard will appear. 
+
+### Note: The __src__ folder contains the project files.
 
 ## Local Device & OS
 
