@@ -6,7 +6,9 @@ The __src__ folder contains the project files.
 
 * [HP Pavilion 15](https://www.amazon.com/HP-Pavilion-Graphics-Compatible-15-cs3019nr/dp/B085B63QYR)
 * [Ubuntu 20.04 LTS](https://linuxconfig.org/ubuntu-20-04-download)
-## Tech Stack
+## Installation and Tech Stack
+
+Here are the required components you need to install in your local machine to run this project. 
 
 * [PHP 8](https://www.php.net/)
 * [Composer](https://getcomposer.org/)
@@ -15,6 +17,7 @@ The __src__ folder contains the project files.
 * [Laravel 9](https://laravel.com/)
 * [Docker](https://www.docker.com/)
 * [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
+* [Docker Compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
 * [Node 16](https://nodejs.org)
 * [NPM 8](https://www.npmjs.com)
 
@@ -73,3 +76,7 @@ List of docker commands to run the project.
 The relation between the tables of the project's database is displayed below.
 
 <img src="./images/Databsae_Schema.png">
+
+## Screenshot of the requirements
+
+* 
