@@ -79,8 +79,7 @@ The relation between the tables of the project's database is displayed below.
 
 ## Screenshot of the requirements
 
-### **R1**: As a user, I want to sign up with my first name, last name, new email, and password.
- The email address must be unique.
+### **R1**: As a user, I want to sign up with my first name, last name, new email, and password.  The email address must be unique.
 
  <img src="./images/R1.png">
 
@@ -91,15 +90,18 @@ The relation between the tables of the project's database is displayed below.
 ### **R3**: As a user, I want to send emails to another email address.
 
  <img src="./images/R3_a.jpg">
+
  <img src="./images/R3_b.jpg">
 
 ### **R4**: As a user, I want to receive emails from another email address.
 
  <img src="./images/R4_a.jpg">
+
  <img src="./images/R4_b.jpg">
 
 ### **R5**: As a user, I want to get emails in my inbox in four categories:
  Primary, Social, Promotional, and Forum. Email must be automatically categorized.
  
  <img src="./images/R5_a.jpg">
+
  <img src="./images/R5_b.jpg">
