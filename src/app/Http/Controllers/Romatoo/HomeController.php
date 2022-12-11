@@ -58,7 +58,7 @@ class HomeController extends Controller
     public function dashboard()
     {
 
-        if(user_login_ok())
+        if(Auth::check())
         {   
             $user = user_info();
 
