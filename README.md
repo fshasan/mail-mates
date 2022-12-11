@@ -30,6 +30,10 @@ Here are the required components you need to install in your local machine to ru
 Hit the link to view the project : https://romato-u689p.vercel.app/login
 
  __***** Currently some fixes are going on with the URL *****.__ 
+
+ ## Project Demonstration
+
+Here's a YouTube video that summarizes the project : 
 ## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
