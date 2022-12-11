@@ -29,7 +29,7 @@ Here are the required components you need to install in your local machine to ru
 
 Hit the link to view the project : https://romato-u689p-fsh-98.vercel.app/login
 
- __*The URL may change, if any problem occurs, do contact the author.__ 
+ __***** Currently some fixes are going on. The url might not work now *****.__ 
 ## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
