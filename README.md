@@ -25,9 +25,11 @@ Here are the required components you need to install in your local machine to ru
 
 ## Deployment
 
-* Cloud Server: [Scalingo](https://scalingo.com/)
+* Cloud Server: [Vercel](https://vercel.com/)
 
-Hit the link to view the project : 
+Hit the link to view the project : (https://romato-u689p-fsh-98.vercel.app/login)
+
+### *The URL may change, if any problem occurs, do contact the author. 
 ## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
