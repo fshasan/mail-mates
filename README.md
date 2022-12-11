@@ -27,7 +27,7 @@ Here are the required components you need to install in your local machine to ru
 
 * Cloud Server: [Vercel](https://vercel.com/)
 
-Hit the link to view the project : https://romato-u689p-fsh-98.vercel.app/login
+Hit the link to view the project : https://romato-u689p.vercel.app/login
 
  __***** Currently some fixes are going on with the URL *****.__ 
 ## Docker Services
