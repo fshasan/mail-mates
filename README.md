@@ -82,7 +82,7 @@ List of docker commands to run the project.
 
 ## Database Schema
 
-<img src="./images/Databsae_Schema.png">
+<img src="./images/Database_Schema.png">
 
 ## Requirements (Screenshot)
 
