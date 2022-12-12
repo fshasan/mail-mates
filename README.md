@@ -1,5 +1,3 @@
-### Note: The __src__ folder contains the project files.
-
 ## Tech Stack
 
 * [PHP 8](https://www.php.net/)
