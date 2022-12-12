@@ -2,8 +2,6 @@
 
 ## Tech Stack
 
-Here are the required components you need to install in your local machine to run this project. 
-
 * [PHP 8](https://www.php.net/)
 * [Composer](https://getcomposer.org/)
 * [MySQL 8](https://www.mysql.com/)
@@ -17,16 +15,12 @@ Here are the required components you need to install in your local machine to ru
 
 ## Docker Services
 
-Here are the list of services used on docker-compose.yml file.
-
 * [PHP](https://hub.docker.com/_/php)
 * [MySQL](https://hub.docker.com/_/mysql)
 * [Nginx](https://hub.docker.com/_/nginx)
 * [phpmyadmin](https://hub.docker.com/_/phpmyadmin)
 
 ## Docker commands
-
-List of docker commands to run the project.
 
 * Make a .env file on src folder & copy the contents of .env.example on .env file.
    ```sh
