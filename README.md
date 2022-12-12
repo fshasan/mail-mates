@@ -1,14 +1,6 @@
-## About Project
-
-It's basically a user to user mail messaging system. To send or recieve emails, the sender and reciever must have their credentials registered. After the registration, the user can login with their accounts. Once that is done, their personal dashboard will appear. 
-
 ### Note: The __src__ folder contains the project files.
 
-## Local Device & OS
-
-* [HP Pavilion 15](https://www.amazon.com/HP-Pavilion-Graphics-Compatible-15-cs3019nr/dp/B085B63QYR)
-* [Ubuntu 20.04 LTS](https://linuxconfig.org/ubuntu-20-04-download)
-## Installation and Tech Design
+## Tech Stack
 
 Here are the required components you need to install in your local machine to run this project. 
 
@@ -23,17 +15,6 @@ Here are the required components you need to install in your local machine to ru
 * [Node 16](https://nodejs.org)
 * [NPM 8](https://www.npmjs.com)
 
-## Deployment
-
-* Cloud Server: [Vercel](https://vercel.com/)
-
-Hit the link to view the project : https://romato-u689p.vercel.app/login
-
- __***** Currently some fixes are going on with the URL *****.__ 
-
- ## Project Demonstration
-
-Here's a YouTube video that summarizes the project : 
 ## Docker Services
 
 Here are the list of services used on docker-compose.yml file.
@@ -87,31 +68,3 @@ List of docker commands to run the project.
 ## Database Schema
 
 <img src="./images/Database_Schema.png">
-
-## Requirements (Screenshot)
-
-### R1: As a user, I want to sign up with my first name, last name, new email, and password.  The email address must be unique.
-
- <img src="./images/R1.png">
-
-### R2: As a user, I want to sign in using my email address and password.
-
- <img src="./images/R2.png">
-
-### R3: As a user, I want to send emails to another email address.
-
- <img src="./images/R3_a.jpg">
-
- <img src="./images/R3_b.jpg">
-
-### R4: As a user, I want to receive emails from another email address.
-
- <img src="./images/R4_a.jpg">
-
- <img src="./images/R4_b.jpg">
-
-### R5: As a user, I want to get emails in my inbox in four categories: Primary, Social, Promotional, and Forum. Email must be automatically categorized.
- 
- <img src="./images/R5_a.jpg">
-
- <img src="./images/R5_b.jpg">
