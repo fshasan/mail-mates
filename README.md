@@ -19,6 +19,7 @@
 ## Installation
 
 * Run this to build the project.
+
    ```sh
    ./install.sh
    ```
