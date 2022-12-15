@@ -2,7 +2,7 @@
 
 * As a user, I want to sign up with my first name, last name, new email, and password. The email address must be unique.
 
- <img src="./images/R1.png" width="100" height="100">
+ <img src="./images/R1.png" width="200" height="400">
 
 * As a user, I want to sign in using my email address and password.
 
