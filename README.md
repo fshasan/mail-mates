@@ -2,7 +2,10 @@
 
 * As a user, I want to sign up with my first name, last name, new email, and password. The email address must be unique.
 
- <img src="./images/R1.png" width="800" height="400">
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
+[[./images/R1.png]]
+
+ <!-- <img src="" width="800" height="400"> -->
 
 * As a user, I want to sign in using my email address and password.
 
