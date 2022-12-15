@@ -54,4 +54,4 @@
 
 ## Database Schema
 
-<img src="./images/Database_Schema.png" width="800">
+<img src="./images/Database_Schema.png" width="900">
