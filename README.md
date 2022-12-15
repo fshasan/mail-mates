@@ -1,31 +1,3 @@
-## Demonstration
-
-* As a user, I want to sign up with my first name, last name, new email, and password. The email address must be unique.
-
- <img src="./images/R1.png">
-
-* As a user, I want to sign in using my email address and password.
-
- <img src="./images/R2.png">
-
-* As a user, I want to send emails to another email address.
-
- <img src="./images/R3_a.jpg">
-
- <img src="./images/R3_b.jpg">
-
-* As a user, I want to receive emails from another email address.
-
- <img src="./images/R4_a.jpg">
-
- <img src="./images/R4_b.jpg">
-
-* As a user, I want to get emails in my inbox in four categories: Primary, Social, Promotional, and Forum.
- 
- <img src="./images/R5_a.jpg">
-
- <img src="./images/R5_b.jpg">
-
 ## Tech Stack
 
 * [PHP 8](https://www.php.net/)
@@ -55,3 +27,31 @@
 ## Database Schema
 
 <img src="./images/Database_Schema.png" width="900">
+
+## Demonstration
+
+* As a user, I want to sign up with my first name, last name, new email, and password. The email address must be unique.
+
+ <img src="./images/R1.png">
+
+* As a user, I want to sign in using my email address and password.
+
+ <img src="./images/R2.png">
+
+* As a user, I want to send emails to another email address.
+
+ <img src="./images/R3_a.jpg">
+
+ <img src="./images/R3_b.jpg">
+
+* As a user, I want to receive emails from another email address.
+
+ <img src="./images/R4_a.jpg">
+
+ <img src="./images/R4_b.jpg">
+
+* As a user, I want to get emails in my inbox in four categories: Primary, Social, Promotional, and Forum.
+ 
+ <img src="./images/R5_a.jpg">
+
+ <img src="./images/R5_b.jpg">
