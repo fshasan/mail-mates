@@ -31,7 +31,7 @@
 
 <form class="mr-3" style="float: right">
     <div class="input-group">
-        <input type="text" class="form-control table_search" name="search" placeholder="Search by email subject" required value="{{ request()->get('search') }}" autocomplete="off">
+        <input type="text" class="form-control table_search" name="search_drafts" placeholder="Search by email subject" required value="{{ request()->get('search') }}" autocomplete="off">
         <div class="input-group-append">
             <button class="btn btn-primary"><i class="bi bi-search"></i></button>
         </div>
@@ -54,7 +54,7 @@
     });
 
     $('.reset').on('click', function() {
-        $("select[name = email_type],  input[name = search], input[name = recieved_at]").val('');
+        $("select[name = email_type_drafts],  input[name = search_drafts], input[name = recieved_at_drafts]").val('');
     });
     
 </script>

@@ -1,8 +1,9 @@
 <?php 
 
 namespace App\ModelFilters;
-
+use Illuminate\Support\Facades\Auth;
 use EloquentFilter\ModelFilter;
+use Carbon\Carbon;
 
 class DraftFilter extends ModelFilter
 {
@@ -13,4 +14,42 @@ class DraftFilter extends ModelFilter
     * @var array
     */
     public $relations = [];
+
+    public function emailTypeDrafts($type)
+    {
+        $user = Auth::user();
+
+        switch ($type) {
+            case 1:
+                return $this->where('email_type', 1)->where('user_id', Auth::id());
+                break;
+            case 2:
+                return $this->where('email_type', 2)->where('user_id', Auth::id());
+                break;
+            case 3:
+                return $this->where('email_type', 3)->where('user_id', Auth::id());
+                break;
+            case 4:
+                return $this->where('email_type', 4)->where('user_id', Auth::id());
+                break;
+        }
+    }
+
+    public function recievedAtDrafts($range)
+    {
+        $rangeArray = explode(' - ', $range);
+
+        $startDate = Carbon::parse($rangeArray[0])->format('Y-m-d');
+
+        $endDate = Carbon::parse($rangeArray[1])->format('Y-m-d');
+
+        return $this->whereBetween('created_at', [$startDate, $endDate]);
+    }
+
+    public function searchDrafts($search)
+    {
+        return $this->whereLike('subject', $search);
+    }
+
+
 }

@@ -25,14 +25,15 @@
 
 	</div>
 
-@elseif(request()->has('messageType') && request()->get('messageType') == "Drafts")
+@elseif (request()->has('messageType') && request()->get('messageType') == "Drafts")
 	<div class="card">
 		<div class="card-header mt-4">
 			@include('Romatoo.components.draftsFilter')
 		</div>
 
 		<div class="card-body mt-4">
-			<h5>Welcome to Drafts.</h5>
+			<h5>Welcome to Drafts. You have a total of {{$drafts->count()}} messages.</h5>
+			@include('Romatoo.components.drafts')
 		</div>
 
 
