@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Romatoo;
 
 use App\Models\User;
 use App\Models\Email;
+use App\Models\Draft;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EmailRequest;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -70,9 +72,9 @@ class HomeController extends Controller
         return redirect('login')->with('success', 'you are not allowed to access');
     }
 
-    public function sendEmail(EmailRequest $request)
+    public function sendEmail(Request $request, EmailRequest $emailRequest)
     {
-        $data = $request->all();
+        $data = $emailRequest->all();
 
         $getMail = explode(",", $data['recipient']);
 
@@ -83,20 +85,43 @@ class HomeController extends Controller
 
         $user = user_info();
 
-        $email = Email::create([
-            'sender' => $user['email'],
-            'recievers' => [
-                'email' => $getMail,
-                'total' => count($getMail),
-            ],
-             'email_type' => $data['type'],
-             'subject' => $data['subject'],
-             'body' => $data['message']
-        ]);
+        if ($request->has('submit'))
+        {
+            $email = Email::create([
+                'sender' => $user['email'],
+                'recievers' => [
+                    'email' => $getMail,
+                    'quantity' => count($getMail),
+                ],
+                 'email_type' => $data['type'],
+                 'subject' => $data['subject'],
+                 'body' => $data['message']
+            ]);
+    
+            $email->save();
+    
+            return redirect()->route('dashboard', ['user_id' => logged_in_id()])->with('success', 'Mail Sent Successfully!');
+        }
 
-        $email->save();
+        if ($request->has('save'))
+        {
+            $email = Draft::create([
+                'user_id' => Auth::id(),
+                'sender' => $user['email'],
+                'recievers' => [
+                    'email' => $getMail,
+                    'quantity' => count($getMail),
+                ],
+                 'email_type' => $data['type'],
+                 'subject' => $data['subject'],
+                 'body' => $data['message']
+            ]);
+    
+            $email->save();
+    
+            return redirect()->route('dashboard', ['user_id' => logged_in_id()])->with('success', 'Mail saved to drafts.');
+        }
 
-        return redirect()->route('dashboard', ['user_id' => logged_in_id()])->with('success', 'Mail Sent Successfully!');
     }
 
     public function logout()

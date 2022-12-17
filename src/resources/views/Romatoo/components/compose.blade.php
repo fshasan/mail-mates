@@ -37,8 +37,8 @@
               </div>
               <div class="form-group mt-4">
                 <button type="reset" class="btn btn-danger">Clear</button>
-                <button type="button" class="btn btn-info">Save as draft</button>
-                <button type="submit" class="btn btn-primary">Send message</button>
+                <button type="submit" name="save" class="btn btn-info">Save as draft</button>
+                <button type="submit" name="submit" class="btn btn-primary">Send message</button>
               </div>
             </form>
           </div>
