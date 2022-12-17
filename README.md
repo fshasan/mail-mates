@@ -1,4 +1,4 @@
-## Tech Stack
+## Requirements
 
 * [PHP 8](https://www.php.net/)
 * [Composer](https://getcomposer.org/)
@@ -23,10 +23,20 @@
    ```sh
    ./install.sh
    ```
+* Check running docker conatainers status.
+
+   ```sh
+   docker-compose ps
+   ```
+* Shut down all running docker containers.
+
+   ```sh
+   docker-compose down
+   ```
 
 ## Database Schema
 
-<img src="./images/Database_Schema.png" width="900">
+Here's the link to the db schema of the project: [DB Schema](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Database%20Schema#R7ZlRb5swEMc%2FDY%2BbAJcseRy02yql0rRI22N1AQesGhyZy0j66XcmNimNorbSEvKAFCn47ztjn39O%2FgKPJeX2u4Z18aAyLr3Qz7Yeu%2FXCMGCRT19G2e2VqT%2FbC7kWmQ06CAvxzK1o8%2FKNyHjdC0SlJIp1X0xVVfEUexporZp%2B2ErJ%2Fl3XkPMjYZGCPFb%2FiAwLuwq3LKP%2F4CIv3J0D3%2FaU4IKtUBeQqeaFxO48lmilcH9VbhMuTfFcXfZ53070dhPTvML3JMxv578BlukjsuAxYXc7fi8%2B2VH%2BgtzYBXvhRNJ48ZIucnOxqbmunUrDdx12WbhztaobUUqoqBWvVIUL2%2BNTOy2EzOawUxsz1xohfXKtuFBaPFM8SOoKSKBujRYF5vciFibTjql5TTE%2FXQGCV9IDbHuBc6jRzUZJCetaLNv5mcQSdC6qWCGq0gY1hUC%2BWENqYhqi20wESzdJWziukW9P7kjQ7TMdEK5KjnpHITahQ8OejdCx0xxIC26sVrykzCWCpTvvxj4AQBeWgQ%2FwEB7xcI%2B8JCU42m1aN7abpdUTT5RUmvRK7bdfSPlKAinyipqSr0yaKZygY%2FbVyqXIMjNyXFPFRZXP27Dbm4Pyy67fSIrSV7I9TQUlchohXitRYVuPKKYPVSjxP0deRHNNqB0c2vQx4RoTVdH0QbTbxYmPhhtGYq0QEJYdvf8DhdPH75gPywN7Jw7sXDSwUzSEIw0Xp2EyNA03p2hgIw0Xp2E2NA3R284h07DC0Tqcwzp0vtr9VUwHtw6T0Tpc8uchum7r8GW0DtdDw%2BDWYTpah%2BuhYXDrMHvbOvAShBytwzmsQ%2FT6qUMwuHUIjh9Djf8WZ%2Fx9mF23d3BAjlbyGnAY3DwEJx9Kju7h8jic0T1Q8%2FA6pO178VKJ3f0D)
 
 ## Demonstration
 
