@@ -1,3 +1,18 @@
+<div class="dropdown mr-3">
+  <button class="btn btn-primary dropdown-toggle btn-lg" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Category
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    @for($i = 1; $i <= count(\App\Enums\MessageType::MESSAGE_TYPES_WITH_LABEL); $i++)
+      <form>
+        <input type="text" name="messageType" hidden value="{{\App\Enums\MessageType::MESSAGE_TYPES_WITH_LABEL[$i]}}">
+        <button class="btn dropdown-item btn-light"> {{ \App\Enums\MessageType::MESSAGE_TYPES_WITH_LABEL[$i] }}</button>
+      </form>
+    @endfor
+
+  </div>
+</div>
+
 <div style="float: right">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><b class="bi bi-pencil-fill">	Compose</b></button>
 
