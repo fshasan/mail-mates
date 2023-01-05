@@ -1,7 +1,3 @@
-## Noteworthy 
-
-<b>This is a dockerized laravel application.</b>
-
 ## Requirements
 
 * [PHP 8](https://www.php.net/)
