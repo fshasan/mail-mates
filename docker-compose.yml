@@ -31,7 +31,7 @@ services:
         volumes: 
             - ./mysql:/var/lib/mysql
         environment: 
-            MYSQL_DATABASE: laravel_docker
+            MYSQL_DATABASE: dummy_mail
             MYSQL_USER: user
             MYSQL_PASSWORD: user
             MYSQL_ROOT_PASSWORD: root
