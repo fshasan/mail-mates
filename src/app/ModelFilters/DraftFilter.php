@@ -17,22 +17,18 @@ class DraftFilter extends ModelFilter
 
     public function emailTypeDrafts($type)
     {
-        $user = Auth::user();
+        $draftType = match ($type)
+        {
+            1 => $this->where('email_type', 1)->where('user_id', Auth::id()),
 
-        switch ($type) {
-            case 1:
-                return $this->where('email_type', 1)->where('user_id', Auth::id());
-                break;
-            case 2:
-                return $this->where('email_type', 2)->where('user_id', Auth::id());
-                break;
-            case 3:
-                return $this->where('email_type', 3)->where('user_id', Auth::id());
-                break;
-            case 4:
-                return $this->where('email_type', 4)->where('user_id', Auth::id());
-                break;
-        }
+            2 => $this->where('email_type', 2)->where('user_id', Auth::id()),
+
+            3 => $this->where('email_type', 3)->where('user_id', Auth::id()),
+
+            4 => $this->where('email_type', 4)->where('user_id', Auth::id()),
+        };
+
+        return $draftType;
     }
 
     public function recievedAtDrafts($range)

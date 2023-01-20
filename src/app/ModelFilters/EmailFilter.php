@@ -18,21 +18,19 @@ class EmailFilter extends ModelFilter
     public function emailType($type)
     {
         $user = Auth::user();
+
+        $emailType = match ($type)
+        {
+            1 => $this->where('email_type', 1)->whereJsonContains('recievers', ['email' => $user['email']]),
+
+            2 => $this->where('email_type', 2)->whereJsonContains('recievers', ['email' => $user['email']]),
+
+            3 => $this->where('email_type', 3)->whereJsonContains('recievers', ['email' => $user['email']]),
+
+            4 => $this->where('email_type', 4)->whereJsonContains('recievers', ['email' => $user['email']]),
+        };
     
-        switch ($type) {
-            case 1:
-                return $this->where('email_type', 1)->whereJsonContains('recievers', ['email' => $user['email']]);
-                break;
-            case 2:
-                return $this->where('email_type', 2)->whereJsonContains('recievers', ['email' => $user['email']]);
-                break;
-            case 3:
-                return $this->where('email_type', 3)->whereJsonContains('recievers', ['email' => $user['email']]);
-                break;
-            case 4:
-                return $this->where('email_type', 4)->whereJsonContains('recievers', ['email' => $user['email']]);;
-                break;
-        }
+        return $emailType;
     }
 
     public function search($search)
