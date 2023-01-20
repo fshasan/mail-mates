@@ -1,3 +1,5 @@
+cp docker-compose.yml.example docker-compose.yml
+
 cd src/
 cp .env.example .env
 
