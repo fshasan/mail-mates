@@ -39,7 +39,7 @@
 Click [here](https://cutt.ly/Q2Q5oVq) to view.
 ## Demonstration
 
-* As a user, I want to sign up with my first name, last name, new email, and password. The email address must be unique.
+* As a user, I want to sign up with my `first name`, `last name`, `new email`, and `password`. The email address must be unique.
 
  <img src="./images/R1.png">
 
@@ -59,7 +59,7 @@ Click [here](https://cutt.ly/Q2Q5oVq) to view.
 
  <img src="./images/R4_b.jpg">
 
-* As a user, I want to get emails in my inbox in four categories: Primary, Social, Promotional, and Forum.
+* As a user, I want to get emails in my inbox in four categories: `Primary`, `Social`, `Promotional`, and `Forum`.
  
  <img src="./images/R5_a.jpg">
 
