@@ -10,6 +10,7 @@ docker-compose up -d
 cd src/
 ./php.sh
 composer install
+composer update
 chmod -R 777 storage/
 php artisan key:generate 
 php artisan migrate:fresh
