@@ -1,3 +1,4 @@
+# List of commands to install project
 cp docker-compose.yml.example docker-compose.yml
 
 cd src/
@@ -9,7 +10,6 @@ docker-compose up -d
 
 cd src/
 ./php.sh
-composer install
 composer update
 chmod -R 777 storage/
 php artisan key:generate 
