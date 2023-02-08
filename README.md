@@ -1,4 +1,4 @@
-## Dev Stack
+## Tech Stack
 
 [![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javascript.com/)
@@ -16,7 +16,7 @@
 * [Nginx](https://hub.docker.com/_/nginx)
 * [phpmyadmin](https://hub.docker.com/_/phpmyadmin)
 
-## Installation
+## Getting Started
 
 * Run this to build the project.
 
