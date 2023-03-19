@@ -18,12 +18,51 @@
 
 ## Getting Started
 
-* Run this to build the project.
+* Make a copy of docker compose file from the example file.
 
    ```sh
-   ./install.sh
+   cp docker-compose.yml.example docker-compose.yml
    ```
-* Check running docker conatainers status.
+* Then switch to the project folder, i.e `src` & make copy of the local env file.
+
+   ```sh
+   cp .env.example .env
+   ```
+
+* Return to the root folder and run this command to build the docker containers.
+
+   ```sh
+   docker-compose up -d --build
+   ```
+
+* To access the php container, use this command
+
+   ```sh
+   docker exec -it php /bin/sh
+   ```
+* Install composer from the php container
+
+   ```sh
+   composer install
+   ```
+
+* Give permission to the storage folder of the application
+
+   ```sh
+   chmod -R 777 storage/
+   ```
+* Generate the application key using the following command
+
+   ```sh
+   php artisan key:generate
+   ```
+* Migrate the tables to the database
+
+   ```sh
+   php artisan migrate
+   ```
+
+* Check running docker conatainers status (Switch to root directory for docker access).
 
    ```sh
    docker-compose ps
