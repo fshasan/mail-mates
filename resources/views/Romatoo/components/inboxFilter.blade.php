@@ -17,7 +17,7 @@
                         <i class="bi bi-calendar"></i>
                     </div>
                 </div>
-                <input type="text" class="form-control dateranging" id="dateRanging" name="recieved_at" value="{{ request()->get('recieved_at') }}" placeholder="Recieved Between" autocomplete="off">
+                <input type="text" class="form-control dateranging" id="dateRanging" name="received_at" value="{{ request()->get('received_at') }}" placeholder="received Between" autocomplete="off">
             </div>
         </div>
         <div class="form-group col-auto mb-3">
@@ -54,7 +54,7 @@
     });
 
     $('.reset').on('click', function() {
-        $("select[name = email_type],  input[name = search], input[name = recieved_at]").val('');
+        $("select[name = email_type],  input[name = search], input[name = received_at]").val('');
     });
-    
+
 </script>

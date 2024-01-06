@@ -1,6 +1,7 @@
-<?php 
+<?php
 
 namespace App\ModelFilters;
+
 use Illuminate\Support\Facades\Auth;
 use EloquentFilter\ModelFilter;
 use Carbon\Carbon;
@@ -8,17 +9,16 @@ use Carbon\Carbon;
 class DraftFilter extends ModelFilter
 {
     /**
-    * Related Models that have ModelFilters as well as the method on the ModelFilter
-    * As [relationMethod => [input_key1, input_key2]].
-    *
-    * @var array
-    */
+     * Related Models that have ModelFilters as well as the method on the ModelFilter
+     * As [relationMethod => [input_key1, input_key2]].
+     *
+     * @var array
+     */
     public $relations = [];
 
     public function emailTypeDrafts($type)
     {
-        $draftType = match ($type)
-        {
+        $draftType = match ($type) {
             1 => $this->where('email_type', 1)->where('user_id', Auth::id()),
 
             2 => $this->where('email_type', 2)->where('user_id', Auth::id()),
@@ -31,7 +31,7 @@ class DraftFilter extends ModelFilter
         return $draftType;
     }
 
-    public function recievedAtDrafts($range)
+    public function receivedAtDrafts($range)
     {
         $rangeArray = explode(' - ', $range);
 
@@ -46,6 +46,4 @@ class DraftFilter extends ModelFilter
     {
         return $this->whereLike('subject', $search);
     }
-
-
 }

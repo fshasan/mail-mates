@@ -3,8 +3,8 @@
         <tr>
             <th>Type</th>
             <th>Message</th>
-            <th>Recieved from</th>
-            <th>Recieved at</th>
+            <th>received from</th>
+            <th>received at</th>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +15,7 @@
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#code{{$email->id}}">
                         View
                       </button>
-                      
+
                       <!-- Modal -->
                       <div class="modal fade" id="code{{$email->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -42,7 +42,7 @@
                 <td>{{$email->sender}}</td>
                 <td>{{$email->created_at}}</td>
             </tr>
-        @empty 
+        @empty
             <tr>
                 <td colspan="5" align="center" style="color: #AA7777;">No messages found!</td>
             </tr>
